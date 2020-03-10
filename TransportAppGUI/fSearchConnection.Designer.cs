@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Datum/Zeit");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Abfahrt");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Von");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Nach");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Ankunft");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Reisezeit");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Linie");
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lvConnections = new System.Windows.Forms.ListView();
@@ -42,6 +35,13 @@
             this.cbEndStation = new System.Windows.Forms.ComboBox();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.dtpTime = new System.Windows.Forms.DateTimePicker();
+            this.cDateTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cAbfahrt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cFrom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cTo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cArriveTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cTravelTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cLine = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -62,30 +62,22 @@
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Suchen";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // lvConnections
             // 
             this.lvConnections.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvConnections.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.cDateTime,
+            this.cAbfahrt,
+            this.cFrom,
+            this.cTo,
+            this.cArriveTime,
+            this.cTravelTime,
+            this.cLine});
             this.lvConnections.HideSelection = false;
-            listViewItem1.ToolTipText = "Datum/Zeit";
-            listViewItem2.Checked = true;
-            listViewItem2.StateImageIndex = 1;
-            listViewItem2.ToolTipText = "Abfahrt";
-            listViewItem3.ToolTipText = "Von";
-            listViewItem4.ToolTipText = "Nach";
-            listViewItem5.ToolTipText = "Ankunft";
-            listViewItem6.ToolTipText = "Reisezeit";
-            listViewItem7.ToolTipText = "Linie";
-            this.lvConnections.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7});
             this.lvConnections.Location = new System.Drawing.Point(12, 275);
             this.lvConnections.Name = "lvConnections";
             this.lvConnections.Size = new System.Drawing.Size(760, 274);
@@ -129,6 +121,40 @@
             this.dtpTime.Size = new System.Drawing.Size(54, 20);
             this.dtpTime.TabIndex = 8;
             // 
+            // cDateTime
+            // 
+            this.cDateTime.Text = "Datum/Uhrzeit";
+            this.cDateTime.Width = 110;
+            // 
+            // cAbfahrt
+            // 
+            this.cAbfahrt.Text = "Abfahrt";
+            this.cAbfahrt.Width = 80;
+            // 
+            // cFrom
+            // 
+            this.cFrom.Text = "Von";
+            this.cFrom.Width = 80;
+            // 
+            // cTo
+            // 
+            this.cTo.Text = "To";
+            this.cTo.Width = 80;
+            // 
+            // cArriveTime
+            // 
+            this.cArriveTime.Text = "Ankunft";
+            this.cArriveTime.Width = 80;
+            // 
+            // cTravelTime
+            // 
+            this.cTravelTime.Text = "Reisezeit";
+            this.cTravelTime.Width = 80;
+            // 
+            // cLine
+            // 
+            this.cLine.Text = "Linie";
+            // 
             // fSearchConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,5 +184,12 @@
         private System.Windows.Forms.ComboBox cbEndStation;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.DateTimePicker dtpTime;
+        private System.Windows.Forms.ColumnHeader cDateTime;
+        private System.Windows.Forms.ColumnHeader cAbfahrt;
+        private System.Windows.Forms.ColumnHeader cFrom;
+        private System.Windows.Forms.ColumnHeader cTo;
+        private System.Windows.Forms.ColumnHeader cArriveTime;
+        private System.Windows.Forms.ColumnHeader cTravelTime;
+        private System.Windows.Forms.ColumnHeader cLine;
     }
 }
