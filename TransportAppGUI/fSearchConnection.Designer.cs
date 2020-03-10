@@ -31,10 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.lvConnections = new System.Windows.Forms.ListView();
-            this.cbStartStation = new System.Windows.Forms.ComboBox();
-            this.cbEndStation = new System.Windows.Forms.ComboBox();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpTime = new System.Windows.Forms.DateTimePicker();
             this.cDateTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cAbfahrt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cFrom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,6 +38,10 @@
             this.cArriveTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cTravelTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cLine = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cbStartStation = new System.Windows.Forms.ComboBox();
+            this.cbEndStation = new System.Windows.Forms.ComboBox();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpTime = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -84,43 +84,6 @@
             this.lvConnections.TabIndex = 4;
             this.lvConnections.UseCompatibleStateImageBehavior = false;
             // 
-            // cbStartStation
-            // 
-            this.cbStartStation.FormattingEnabled = true;
-            this.cbStartStation.Location = new System.Drawing.Point(63, 76);
-            this.cbStartStation.Name = "cbStartStation";
-            this.cbStartStation.Size = new System.Drawing.Size(213, 21);
-            this.cbStartStation.TabIndex = 5;
-            this.cbStartStation.Text = "Von...";
-            // 
-            // cbEndStation
-            // 
-            this.cbEndStation.FormattingEnabled = true;
-            this.cbEndStation.Location = new System.Drawing.Point(491, 76);
-            this.cbEndStation.Name = "cbEndStation";
-            this.cbEndStation.Size = new System.Drawing.Size(213, 21);
-            this.cbEndStation.TabIndex = 6;
-            this.cbEndStation.Text = "Nach...";
-            // 
-            // dtpDate
-            // 
-            this.dtpDate.CustomFormat = "dd/MM/yyyy";
-            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(181, 164);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(104, 20);
-            this.dtpDate.TabIndex = 7;
-            // 
-            // dtpTime
-            // 
-            this.dtpTime.CustomFormat = "HH:mm";
-            this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTime.Location = new System.Drawing.Point(474, 164);
-            this.dtpTime.Name = "dtpTime";
-            this.dtpTime.ShowUpDown = true;
-            this.dtpTime.Size = new System.Drawing.Size(54, 20);
-            this.dtpTime.TabIndex = 8;
-            // 
             // cDateTime
             // 
             this.cDateTime.Text = "Datum/Uhrzeit";
@@ -154,6 +117,45 @@
             // cLine
             // 
             this.cLine.Text = "Linie";
+            // 
+            // cbStartStation
+            // 
+            this.cbStartStation.FormattingEnabled = true;
+            this.cbStartStation.Location = new System.Drawing.Point(63, 76);
+            this.cbStartStation.Name = "cbStartStation";
+            this.cbStartStation.Size = new System.Drawing.Size(213, 21);
+            this.cbStartStation.TabIndex = 5;
+            this.cbStartStation.Text = "Von...";
+            this.cbStartStation.TextUpdate += new System.EventHandler(this.cbStartStation_TextUpdate);
+            // 
+            // cbEndStation
+            // 
+            this.cbEndStation.FormattingEnabled = true;
+            this.cbEndStation.Location = new System.Drawing.Point(491, 76);
+            this.cbEndStation.Name = "cbEndStation";
+            this.cbEndStation.Size = new System.Drawing.Size(213, 21);
+            this.cbEndStation.TabIndex = 6;
+            this.cbEndStation.Text = "Nach...";
+            this.cbEndStation.TextUpdate += new System.EventHandler(this.cbEndStation_TextUpdate);
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDate.Location = new System.Drawing.Point(181, 164);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(104, 20);
+            this.dtpDate.TabIndex = 7;
+            // 
+            // dtpTime
+            // 
+            this.dtpTime.CustomFormat = "HH:mm";
+            this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTime.Location = new System.Drawing.Point(474, 164);
+            this.dtpTime.Name = "dtpTime";
+            this.dtpTime.ShowUpDown = true;
+            this.dtpTime.Size = new System.Drawing.Size(54, 20);
+            this.dtpTime.TabIndex = 8;
             // 
             // fSearchConnection
             // 

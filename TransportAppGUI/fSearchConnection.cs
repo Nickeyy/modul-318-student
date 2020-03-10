@@ -37,5 +37,37 @@ namespace TransportAppGUI
             string []  connections = { connection.From.Departure.ToString().Substring(0,10) ,connection.From.Departure.ToString().Substring(11,5), connection.From.Station.Name, connection.To.Station.Name, connection.To.Arrival.ToString().Substring(11, 5), connection.Duration.Substring(3, 5), connection.From.Platform};
             return new ListViewItem(connections);
         }
+
+        private void cbStartStation_TextUpdate(object sender, EventArgs e)
+        {
+            ClearStationNames(cbStartStation);
+            AddStationToCombobox(cbStartStation);
+        }
+
+        private void cbEndStation_TextUpdate(object sender, EventArgs e)
+        {
+            ClearStationNames(cbEndStation);
+            AddStationToCombobox(cbEndStation);
+        }
+
+        private void ClearStationNames(ComboBox comboBox)
+        {
+            comboBox.Items.Clear();
+            comboBox.SelectionStart = comboBox.Text.Length;
+            comboBox.SelectionLength = 0;
+        }
+
+        private void AddStationToCombobox(ComboBox comboBox)
+        {
+            comboBox.DroppedDown = true;
+
+                foreach (Station station in transport.GetStations(comboBox.Text).StationList)
+                {
+                    if (station.Name != null)
+                    {
+                    comboBox.Items.Add(station.Name);
+                    }
+                }
+        }
     }
 }
