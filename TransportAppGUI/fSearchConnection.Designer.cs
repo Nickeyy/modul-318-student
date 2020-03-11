@@ -58,7 +58,7 @@
             // 
             this.btnSearch.Location = new System.Drawing.Point(281, 125);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(199, 33);
+            this.btnSearch.Size = new System.Drawing.Size(204, 58);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Suchen";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -83,6 +83,7 @@
             this.lvConnections.Size = new System.Drawing.Size(760, 274);
             this.lvConnections.TabIndex = 4;
             this.lvConnections.UseCompatibleStateImageBehavior = false;
+            this.lvConnections.View = System.Windows.Forms.View.Details;
             // 
             // cDateTime
             // 
@@ -142,7 +143,7 @@
             // 
             this.dtpDate.CustomFormat = "dd/MM/yyyy";
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(181, 164);
+            this.dtpDate.Location = new System.Drawing.Point(184, 189);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(104, 20);
             this.dtpDate.TabIndex = 7;
@@ -151,7 +152,7 @@
             // 
             this.dtpTime.CustomFormat = "HH:mm";
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTime.Location = new System.Drawing.Point(474, 164);
+            this.dtpTime.Location = new System.Drawing.Point(480, 189);
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.ShowUpDown = true;
             this.dtpTime.Size = new System.Drawing.Size(54, 20);
@@ -171,7 +172,7 @@
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "fSearchConnection";
-            this.Text = "fSearchConnection";
+            this.Text = "SearchConnection";
             this.ResumeLayout(false);
             this.PerformLayout();
 

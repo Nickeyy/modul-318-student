@@ -17,7 +17,6 @@ namespace TransportAppGUI
         public fSearchConnection()
         {
             InitializeComponent();
-            lvConnections.View = View.Details;
             transport = new SwissTransport.Transport();
         }
 
@@ -26,7 +25,7 @@ namespace TransportAppGUI
             //SearchConnections("Sursee", "Luzern");
             lvConnections.Items.Clear();
 
-            foreach (SwissTransport.Connection connection in transport.GetConnections(cbStartStation.Text,cbEndStation.Text).ConnectionList)
+            foreach (SwissTransport.Connection connection in transport.GetConnections(cbStartStation.Text,cbEndStation.Text, dtpDate.Text, dtpTime.Text).ConnectionList)
             {
                 lvConnections.Items.Add(GetListViewItem(connection));
             }
@@ -63,7 +62,7 @@ namespace TransportAppGUI
 
                 foreach (Station station in transport.GetStations(comboBox.Text).StationList)
                 {
-                    if (station.Name != null)
+                    if (station.Name != null && station.Id != null)
                     {
                     comboBox.Items.Add(station.Name);
                     }
