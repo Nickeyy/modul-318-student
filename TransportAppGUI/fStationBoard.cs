@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -42,6 +43,12 @@ namespace TransportAppGUI
             cbStation.BackColor = SystemColors.Window;
             cbStation.ClearStationNames();
             cbStation.AddStationToCombobox(transport);
+        }
+
+        private void btnShowMap_Click(object sender, EventArgs e)
+        {
+            Station station = transport.GetStations(cbStation.Text).StationList.First();
+            Process.Start("https://www.google.com/maps/search/?api=1&query=" + station.Coordinate.XCoordinate + ","+station.Coordinate.YCoordinate);
         }
     }
 }

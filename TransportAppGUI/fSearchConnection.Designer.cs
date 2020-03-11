@@ -42,9 +42,10 @@
             this.dtpTime = new System.Windows.Forms.DateTimePicker();
             this.lblFrom = new System.Windows.Forms.Label();
             this.lblTo = new System.Windows.Forms.Label();
+            this.btnSendMail = new System.Windows.Forms.Button();
+            this.btnSwitchStation = new System.Windows.Forms.Button();
             this.cbStationEnd = new TransportAppGUI.DropDownComboBox();
             this.cbStationFrom = new TransportAppGUI.DropDownComboBox();
-            this.btnSendMail = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -59,10 +60,10 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(281, 125);
+            this.btnSearch.Location = new System.Drawing.Point(285, 165);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(204, 58);
-            this.btnSearch.TabIndex = 3;
+            this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Suchen";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -84,7 +85,7 @@
             this.lvConnections.Location = new System.Drawing.Point(12, 275);
             this.lvConnections.Name = "lvConnections";
             this.lvConnections.Size = new System.Drawing.Size(760, 274);
-            this.lvConnections.TabIndex = 6;
+            this.lvConnections.TabIndex = 8;
             this.lvConnections.UseCompatibleStateImageBehavior = false;
             this.lvConnections.View = System.Windows.Forms.View.Details;
             // 
@@ -126,20 +127,20 @@
             // 
             this.dtpDate.CustomFormat = "dd/MM/yyyy";
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(184, 189);
+            this.dtpDate.Location = new System.Drawing.Point(184, 229);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(104, 20);
-            this.dtpDate.TabIndex = 4;
+            this.dtpDate.TabIndex = 5;
             // 
             // dtpTime
             // 
             this.dtpTime.CustomFormat = "HH:mm";
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTime.Location = new System.Drawing.Point(480, 189);
+            this.dtpTime.Location = new System.Drawing.Point(483, 229);
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.ShowUpDown = true;
             this.dtpTime.Size = new System.Drawing.Size(54, 20);
-            this.dtpTime.TabIndex = 5;
+            this.dtpTime.TabIndex = 6;
             // 
             // lblFrom
             // 
@@ -159,13 +160,33 @@
             this.lblTo.TabIndex = 12;
             this.lblTo.Text = "Nach:";
             // 
+            // btnSendMail
+            // 
+            this.btnSendMail.Location = new System.Drawing.Point(579, 214);
+            this.btnSendMail.Name = "btnSendMail";
+            this.btnSendMail.Size = new System.Drawing.Size(193, 55);
+            this.btnSendMail.TabIndex = 7;
+            this.btnSendMail.Text = "Mail senden";
+            this.btnSendMail.UseVisualStyleBackColor = true;
+            this.btnSendMail.Click += new System.EventHandler(this.btnSendMail_Click);
+            // 
+            // btnSwitchStation
+            // 
+            this.btnSwitchStation.Location = new System.Drawing.Point(336, 73);
+            this.btnSwitchStation.Name = "btnSwitchStation";
+            this.btnSwitchStation.Size = new System.Drawing.Size(105, 40);
+            this.btnSwitchStation.TabIndex = 3;
+            this.btnSwitchStation.Text = "-->\r\n<--";
+            this.btnSwitchStation.UseVisualStyleBackColor = true;
+            this.btnSwitchStation.Click += new System.EventHandler(this.btnSwitchStation_Click);
+            // 
             // cbStationEnd
             // 
             this.cbStationEnd.FormattingEnabled = true;
             this.cbStationEnd.Location = new System.Drawing.Point(480, 84);
             this.cbStationEnd.Name = "cbStationEnd";
             this.cbStationEnd.Size = new System.Drawing.Size(199, 21);
-            this.cbStationEnd.TabIndex = 10;
+            this.cbStationEnd.TabIndex = 2;
             this.cbStationEnd.TextUpdate += new System.EventHandler(this.cbStationEnd_TextUpdate);
             // 
             // cbStationFrom
@@ -174,24 +195,15 @@
             this.cbStationFrom.Location = new System.Drawing.Point(89, 84);
             this.cbStationFrom.Name = "cbStationFrom";
             this.cbStationFrom.Size = new System.Drawing.Size(199, 21);
-            this.cbStationFrom.TabIndex = 9;
+            this.cbStationFrom.TabIndex = 1;
             this.cbStationFrom.TextUpdate += new System.EventHandler(this.cbStationFrom_TextUpdate);
-            // 
-            // btnSendMail
-            // 
-            this.btnSendMail.Location = new System.Drawing.Point(579, 214);
-            this.btnSendMail.Name = "btnSendMail";
-            this.btnSendMail.Size = new System.Drawing.Size(193, 55);
-            this.btnSendMail.TabIndex = 13;
-            this.btnSendMail.Text = "Mail senden";
-            this.btnSendMail.UseVisualStyleBackColor = true;
-            this.btnSendMail.Click += new System.EventHandler(this.btnSendMail_Click);
             // 
             // fSearchConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btnSwitchStation);
             this.Controls.Add(this.btnSendMail);
             this.Controls.Add(this.lblTo);
             this.Controls.Add(this.lblFrom);
@@ -229,5 +241,6 @@
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.Button btnSendMail;
+        private System.Windows.Forms.Button btnSwitchStation;
     }
 }

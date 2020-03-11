@@ -67,5 +67,13 @@ namespace TransportAppGUI
 
             sendMail.sendMail();
         }
+
+        private void btnSwitchStation_Click(object sender, EventArgs e)
+        {
+            string fromStation = cbStationFrom.Text;
+            cbStationFrom.Text = cbStationEnd.Text;
+            cbStationEnd.Text = fromStation;
+           
+        }
     }
 }
