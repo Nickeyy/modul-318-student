@@ -47,8 +47,16 @@ namespace TransportAppGUI
 
         private void btnShowMap_Click(object sender, EventArgs e)
         {
-            Station station = transport.GetStations(cbStation.Text).StationList.First();
-            Process.Start("https://www.google.com/maps/search/?api=1&query=" + station.Coordinate.XCoordinate + ","+station.Coordinate.YCoordinate);
+            if (cbStation.AreStationFilled())
+            {
+                Station station = transport.GetStations(cbStation.Text).StationList.First();
+                Process.Start("https://www.google.com/maps/search/?api=1&query=" + station.Coordinate.XCoordinate + "," + station.Coordinate.YCoordinate);
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

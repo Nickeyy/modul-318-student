@@ -44,6 +44,7 @@
             this.lblTo = new System.Windows.Forms.Label();
             this.btnSendMail = new System.Windows.Forms.Button();
             this.btnSwitchStation = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.cbStationEnd = new TransportAppGUI.DropDownComboBox();
             this.cbStationFrom = new TransportAppGUI.DropDownComboBox();
             this.SuspendLayout();
@@ -180,6 +181,16 @@
             this.btnSwitchStation.UseVisualStyleBackColor = true;
             this.btnSwitchStation.Click += new System.EventHandler(this.btnSwitchStation_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(12, 9);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Text = "abbrechen";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // cbStationEnd
             // 
             this.cbStationEnd.FormattingEnabled = true;
@@ -203,6 +214,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSwitchStation);
             this.Controls.Add(this.btnSendMail);
             this.Controls.Add(this.lblTo);
@@ -242,5 +254,6 @@
         private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.Button btnSendMail;
         private System.Windows.Forms.Button btnSwitchStation;
+        private System.Windows.Forms.Button btnBack;
     }
 }

@@ -37,6 +37,7 @@
             this.cbStation = new TransportAppGUI.DropDownComboBox();
             this.lblStation = new System.Windows.Forms.Label();
             this.btnShowMap = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblStationBoard
@@ -54,7 +55,7 @@
             this.btnSearchStation.Location = new System.Drawing.Point(317, 159);
             this.btnSearchStation.Name = "btnSearchStation";
             this.btnSearchStation.Size = new System.Drawing.Size(178, 52);
-            this.btnSearchStation.TabIndex = 2;
+            this.btnSearchStation.TabIndex = 3;
             this.btnSearchStation.Text = "Suchen";
             this.btnSearchStation.UseVisualStyleBackColor = true;
             this.btnSearchStation.Click += new System.EventHandler(this.btnSearchStation_Click);
@@ -72,7 +73,7 @@
             this.lvStationBoard.Location = new System.Drawing.Point(13, 261);
             this.lvStationBoard.Name = "lvStationBoard";
             this.lvStationBoard.Size = new System.Drawing.Size(775, 288);
-            this.lvStationBoard.TabIndex = 3;
+            this.lvStationBoard.TabIndex = 4;
             this.lvStationBoard.UseCompatibleStateImageBehavior = false;
             this.lvStationBoard.View = System.Windows.Forms.View.Details;
             // 
@@ -97,7 +98,7 @@
             this.cbStation.Location = new System.Drawing.Point(247, 111);
             this.cbStation.Name = "cbStation";
             this.cbStation.Size = new System.Drawing.Size(320, 21);
-            this.cbStation.TabIndex = 4;
+            this.cbStation.TabIndex = 1;
             this.cbStation.TextUpdate += new System.EventHandler(this.cbStation_TextUpdate);
             // 
             // lblStation
@@ -114,16 +115,27 @@
             this.btnShowMap.Location = new System.Drawing.Point(599, 101);
             this.btnShowMap.Name = "btnShowMap";
             this.btnShowMap.Size = new System.Drawing.Size(116, 39);
-            this.btnShowMap.TabIndex = 6;
+            this.btnShowMap.TabIndex = 2;
             this.btnShowMap.Text = "Auf Karte zeigen";
             this.btnShowMap.UseVisualStyleBackColor = true;
             this.btnShowMap.Click += new System.EventHandler(this.btnShowMap_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(13, 13);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 5;
+            this.btnBack.Text = "abbrechen";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // fStationBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 561);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnShowMap);
             this.Controls.Add(this.lblStation);
             this.Controls.Add(this.cbStation);
@@ -149,5 +161,6 @@
         private DropDownComboBox cbStation;
         private System.Windows.Forms.Label lblStation;
         private System.Windows.Forms.Button btnShowMap;
+        private System.Windows.Forms.Button btnBack;
     }
 }
