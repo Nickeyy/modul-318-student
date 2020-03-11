@@ -52,5 +52,20 @@ namespace TransportAppGUI
             cbStationFrom.AddStationToCombobox(transport);
         }
 
+        private void btnSendMail_Click(object sender, EventArgs e)
+        {
+            SendMail sendMail = new SendMail();
+            sendMail.Subject = "Fahrplan";
+
+            foreach(ListViewItem connection in lvConnections.Items)
+            {
+                foreach(ListViewItem.ListViewSubItem subItem in connection.SubItems)
+                {
+                    sendMail.Body += subItem.Text;
+                }
+            }
+
+            sendMail.sendMail();
+        }
     }
 }

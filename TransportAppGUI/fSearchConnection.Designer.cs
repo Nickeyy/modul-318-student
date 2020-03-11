@@ -44,6 +44,7 @@
             this.lblTo = new System.Windows.Forms.Label();
             this.cbStationEnd = new TransportAppGUI.DropDownComboBox();
             this.cbStationFrom = new TransportAppGUI.DropDownComboBox();
+            this.btnSendMail = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -176,11 +177,22 @@
             this.cbStationFrom.TabIndex = 9;
             this.cbStationFrom.TextUpdate += new System.EventHandler(this.cbStationFrom_TextUpdate);
             // 
+            // btnSendMail
+            // 
+            this.btnSendMail.Location = new System.Drawing.Point(579, 214);
+            this.btnSendMail.Name = "btnSendMail";
+            this.btnSendMail.Size = new System.Drawing.Size(193, 55);
+            this.btnSendMail.TabIndex = 13;
+            this.btnSendMail.Text = "Mail senden";
+            this.btnSendMail.UseVisualStyleBackColor = true;
+            this.btnSendMail.Click += new System.EventHandler(this.btnSendMail_Click);
+            // 
             // fSearchConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.btnSendMail);
             this.Controls.Add(this.lblTo);
             this.Controls.Add(this.lblFrom);
             this.Controls.Add(this.cbStationEnd);
@@ -216,5 +228,6 @@
         private DropDownComboBox cbStationEnd;
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Label lblTo;
+        private System.Windows.Forms.Button btnSendMail;
     }
 }

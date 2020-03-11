@@ -40,11 +40,6 @@ namespace TransportAppGUI
                 BackColor = Color.FromArgb(255, 92, 92);
                 returnValue = false;
             }
-            if (Text == null || Text.Length <= 0)
-            {
-                BackColor = Color.FromArgb(255, 92, 92);
-                returnValue = false;
-            }
             return returnValue;
         }
 
