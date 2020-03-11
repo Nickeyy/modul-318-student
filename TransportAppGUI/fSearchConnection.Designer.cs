@@ -163,6 +163,7 @@
             // 
             // btnSendMail
             // 
+            this.btnSendMail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSendMail.Location = new System.Drawing.Point(579, 214);
             this.btnSendMail.Name = "btnSendMail";
             this.btnSendMail.Size = new System.Drawing.Size(193, 55);

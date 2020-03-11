@@ -21,6 +21,7 @@ namespace TransportAppGUI
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             lvConnections.Items.Clear();
             if (cbStationFrom.AreStationFilled() && cbStationEnd.AreStationFilled())
             {

@@ -23,7 +23,7 @@ namespace TransportAppGUI
         public void AddStationToCombobox(Transport transport)
         {
             DroppedDown = true;
-
+            Cursor.Current = Cursors.Default;
             foreach (Station station in transport.GetStations(Text).StationList)
             {
                 if (station.Name != null && station.Id != null)
@@ -35,7 +35,6 @@ namespace TransportAppGUI
         public bool AreStationFilled()
         {
             bool returnValue = true;
-            
             if (Text == null || Text.Length <= 0)
             {
                 BackColor = Color.FromArgb(255, 92, 92);

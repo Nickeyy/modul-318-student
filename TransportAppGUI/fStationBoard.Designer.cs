@@ -112,6 +112,7 @@
             // 
             // btnShowMap
             // 
+            this.btnShowMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShowMap.Location = new System.Drawing.Point(599, 101);
             this.btnShowMap.Name = "btnShowMap";
             this.btnShowMap.Size = new System.Drawing.Size(116, 39);
