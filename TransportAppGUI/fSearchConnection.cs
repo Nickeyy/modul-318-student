@@ -13,23 +13,24 @@ namespace TransportAppGUI
 {
     public partial class fSearchConnection : Form
     {
-        private ITransport transport;
+        readonly Transport transport = new Transport();
         public fSearchConnection()
         {
             InitializeComponent();
-            transport = new SwissTransport.Transport();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            //SearchConnections("Sursee", "Luzern");
             lvConnections.Items.Clear();
-
-            foreach (SwissTransport.Connection connection in transport.GetConnections(cbStartStation.Text,cbEndStation.Text, dtpDate.Text, dtpTime.Text).ConnectionList)
+            if (cbStationFrom.AreStationFilled() && cbStationEnd.AreStationFilled())
             {
-                lvConnections.Items.Add(GetListViewItem(connection));
+                foreach (SwissTransport.Connection connection in transport.GetConnections(cbStationFrom.Text, cbStationEnd.Text, dtpDate.Text, dtpTime.Text).ConnectionList)
+                {
+                    lvConnections.Items.Add(GetListViewItem(connection));
+                }
             }
         }
+
 
         private ListViewItem GetListViewItem(Connection connection)
         {
@@ -37,36 +38,19 @@ namespace TransportAppGUI
             return new ListViewItem(connections);
         }
 
-        private void cbStartStation_TextUpdate(object sender, EventArgs e)
+        private void cbStationEnd_TextUpdate(object sender, EventArgs e)
         {
-            ClearStationNames(cbStartStation);
-            AddStationToCombobox(cbStartStation);
+            cbStationEnd.BackColor = SystemColors.Window;
+            cbStationEnd.ClearStationNames();
+            cbStationEnd.AddStationToCombobox(transport);
         }
 
-        private void cbEndStation_TextUpdate(object sender, EventArgs e)
+        private void cbStationFrom_TextUpdate(object sender, EventArgs e)
         {
-            ClearStationNames(cbEndStation);
-            AddStationToCombobox(cbEndStation);
+            cbStationFrom.BackColor = SystemColors.Window;
+            cbStationFrom.ClearStationNames();
+            cbStationFrom.AddStationToCombobox(transport);
         }
 
-        private void ClearStationNames(ComboBox comboBox)
-        {
-            comboBox.Items.Clear();
-            comboBox.SelectionStart = comboBox.Text.Length;
-            comboBox.SelectionLength = 0;
-        }
-
-        private void AddStationToCombobox(ComboBox comboBox)
-        {
-            comboBox.DroppedDown = true;
-
-                foreach (Station station in transport.GetStations(comboBox.Text).StationList)
-                {
-                    if (station.Name != null && station.Id != null)
-                    {
-                    comboBox.Items.Add(station.Name);
-                    }
-                }
-        }
     }
 }
