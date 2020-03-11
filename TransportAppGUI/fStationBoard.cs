@@ -25,10 +25,19 @@ namespace TransportAppGUI
             lvStationBoard.Items.Clear();
             if (cbStation.AreStationFilled())
             {
-                foreach (SwissTransport.StationBoard stationBoard in transport.GetStationBoard(cbStation.Text, "").Entries)
+                StationBoardRoot stationBoardRoot = transport.GetStationBoard(cbStation.Text, "");
+                if(stationBoardRoot.Entries.Count > 0)
                 {
-                    lvStationBoard.Items.Add(GetListViewItem(stationBoard));
+                    foreach (SwissTransport.StationBoard stationBoard in stationBoardRoot.Entries)
+                    {
+                        lvStationBoard.Items.Add(GetListViewItem(stationBoard));
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Es wurden keine Ergebnisse gefunden", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             } 
         }
 

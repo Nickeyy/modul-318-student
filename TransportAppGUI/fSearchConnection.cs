@@ -24,10 +24,19 @@ namespace TransportAppGUI
             lvConnections.Items.Clear();
             if (cbStationFrom.AreStationFilled() && cbStationEnd.AreStationFilled())
             {
-                foreach (SwissTransport.Connection connection in transport.GetConnections(cbStationFrom.Text, cbStationEnd.Text, dtpDate.Text, dtpTime.Text).ConnectionList)
+                Connections connections = transport.GetConnections(cbStationFrom.Text, cbStationEnd.Text, dtpDate.Text, dtpTime.Text);
+                if (connections.ConnectionList.Count > 0)
                 {
-                    lvConnections.Items.Add(GetListViewItem(connection));
+                    foreach (SwissTransport.Connection connection in connections.ConnectionList)
+                    {
+                        lvConnections.Items.Add(GetListViewItem(connection));
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Es wurden keine Ergebnisse gefunden", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
         }
 

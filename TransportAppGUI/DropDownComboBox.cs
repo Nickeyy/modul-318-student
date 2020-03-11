@@ -15,6 +15,7 @@ namespace TransportAppGUI
         public void ClearStationNames()
         {
             Items.Clear();
+            Items.Add("");
             SelectionStart = Text.Length;
             SelectionLength = 0;
         }
