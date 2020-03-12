@@ -1,6 +1,6 @@
 ﻿namespace TransportAppGUI
 {
-    partial class fStationBoard
+    partial class StationBoard
     {
         /// <summary>
         /// Required designer variable.
@@ -133,6 +133,7 @@
             // 
             // fStationBoard
             // 
+            this.AcceptButton = this.btnSearchStation;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 561);

@@ -1,6 +1,6 @@
 ﻿namespace TransportAppGUI
 {
-    partial class FStartGui
+    partial class MainMenu
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -52,7 +52,7 @@
             this.btnSearchConnection.TabIndex = 1;
             this.btnSearchConnection.Text = "Verbindung Suchen";
             this.btnSearchConnection.UseVisualStyleBackColor = true;
-            this.btnSearchConnection.Click += new System.EventHandler(this.btnSearchConnection_Click);
+            this.btnSearchConnection.Click += new System.EventHandler(this.BtnSearchConnection_Click);
             // 
             // btnSearchStation
             // 
@@ -64,7 +64,7 @@
             this.btnSearchStation.TabIndex = 2;
             this.btnSearchStation.Text = "Ab einer Station suchen";
             this.btnSearchStation.UseVisualStyleBackColor = true;
-            this.btnSearchStation.Click += new System.EventHandler(this.btnSearchStation_Click);
+            this.btnSearchStation.Click += new System.EventHandler(this.BtnSearchStation_Click);
             // 
             // FStartGui
             // 

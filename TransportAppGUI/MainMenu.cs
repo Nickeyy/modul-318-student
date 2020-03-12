@@ -11,22 +11,22 @@ using System.Windows.Forms;
 
 namespace TransportAppGUI
 {
-    public partial class FStartGui : Form
+    public partial class MainMenu : Form
     {
-        public FStartGui()
+        public MainMenu()
         {
             InitializeComponent();
         }
 
-        private void btnSearchConnection_Click(object sender, EventArgs e)
+        private void BtnSearchConnection_Click(object sender, EventArgs e)
         {
-            fSearchConnection connections = new fSearchConnection();
+            SearchConnection connections = new SearchConnection();
             connections.ShowDialog();
         }
 
-        private void btnSearchStation_Click(object sender, EventArgs e)
+        private void BtnSearchStation_Click(object sender, EventArgs e)
         {
-            fStationBoard station = new fStationBoard();
+            StationBoard station = new StationBoard();
             station.ShowDialog();
         }
     }

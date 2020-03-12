@@ -12,10 +12,10 @@ using SwissTransport;
 
 namespace TransportAppGUI
 {
-    public partial class fStationBoard : Form
+    public partial class StationBoard : Form
     {
         readonly Transport transport = new Transport();
-        public fStationBoard()
+        public StationBoard()
         {
             InitializeComponent();
         }
@@ -43,7 +43,7 @@ namespace TransportAppGUI
             } 
         }
 
-        private ListViewItem GetListViewItem(StationBoard stationBoard)
+        private ListViewItem GetListViewItem(SwissTransport.StationBoard stationBoard)
         {
             string[] stationBoards = { stationBoard.Stop.Departure.TimeOfDay.ToString(), stationBoard.To, stationBoard.Category + stationBoard.Number };
             return new ListViewItem(stationBoards);

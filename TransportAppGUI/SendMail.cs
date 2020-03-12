@@ -11,7 +11,6 @@ namespace TransportAppGUI
         private string _subject;
         private string _body;
 
-
         public string Subject
         {
             get { return _subject; }

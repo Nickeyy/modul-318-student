@@ -16,7 +16,7 @@ namespace TransportAppGUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FStartGui());
+            Application.Run(new MainMenu());
         }
     }
 }
