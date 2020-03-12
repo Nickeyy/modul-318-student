@@ -7,4 +7,4 @@ Have Fun!
 
 # Download
 
-**https://github.com/Nickeyy/modul-318-student/tree/master/download/SetupSwissTransportApp.msi?raw=true**
+**https://raw.github.com/Nickeyy/modul-318-student/tree/master/download/SetupSwissTransportApp.msi**
