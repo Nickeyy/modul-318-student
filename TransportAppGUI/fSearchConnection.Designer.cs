@@ -1,6 +1,6 @@
 ﻿namespace TransportAppGUI
 {
-    partial class fSearchConnection
+    partial class FSearchConnection
     {
         /// <summary>
         /// Required designer variable.
@@ -67,7 +67,7 @@
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Suchen";
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // lvConnections
             // 
@@ -170,7 +170,7 @@
             this.btnSendMail.TabIndex = 7;
             this.btnSendMail.Text = "Mail senden";
             this.btnSendMail.UseVisualStyleBackColor = true;
-            this.btnSendMail.Click += new System.EventHandler(this.btnSendMail_Click);
+            this.btnSendMail.Click += new System.EventHandler(this.BtnSendMail_Click);
             // 
             // btnSwitchStation
             // 
@@ -180,7 +180,7 @@
             this.btnSwitchStation.TabIndex = 3;
             this.btnSwitchStation.Text = "-->\r\n<--";
             this.btnSwitchStation.UseVisualStyleBackColor = true;
-            this.btnSwitchStation.Click += new System.EventHandler(this.btnSwitchStation_Click);
+            this.btnSwitchStation.Click += new System.EventHandler(this.BtnSwitchStation_Click);
             // 
             // btnBack
             // 
@@ -190,7 +190,7 @@
             this.btnBack.TabIndex = 9;
             this.btnBack.Text = "abbrechen";
             this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // cbStationEnd
             // 
@@ -199,7 +199,7 @@
             this.cbStationEnd.Name = "cbStationEnd";
             this.cbStationEnd.Size = new System.Drawing.Size(199, 21);
             this.cbStationEnd.TabIndex = 2;
-            this.cbStationEnd.TextUpdate += new System.EventHandler(this.cbStationEnd_TextUpdate);
+            this.cbStationEnd.TextUpdate += new System.EventHandler(this.CbStationEnd_TextUpdate);
             // 
             // cbStationFrom
             // 
@@ -208,7 +208,7 @@
             this.cbStationFrom.Name = "cbStationFrom";
             this.cbStationFrom.Size = new System.Drawing.Size(199, 21);
             this.cbStationFrom.TabIndex = 1;
-            this.cbStationFrom.TextUpdate += new System.EventHandler(this.cbStationFrom_TextUpdate);
+            this.cbStationFrom.TextUpdate += new System.EventHandler(this.CbStationFrom_TextUpdate);
             // 
             // fSearchConnection
             // 

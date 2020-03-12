@@ -11,21 +11,22 @@ using System.Windows.Forms;
 
 namespace TransportAppGUI
 {
-    public partial class fSearchConnection : Form
+    public partial class FSearchConnection : Form
     {
         readonly Transport transport = new Transport();
-        public fSearchConnection()
+        public FSearchConnection()
         {
             InitializeComponent();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void BtnSearch_Click(object sender, EventArgs e)
         {
+            Connections connections;
             Cursor.Current = Cursors.WaitCursor;
             lvConnections.Items.Clear();
             if (cbStationFrom.AreStationFilled() && cbStationEnd.AreStationFilled())
             {
-                Connections connections = transport.GetConnections(cbStationFrom.Text, cbStationEnd.Text, dtpDate.Text, dtpTime.Text);
+                 connections = transport.GetConnections(cbStationFrom.Text, cbStationEnd.Text, dtpDate.Text, dtpTime.Text);
                 if (connections.ConnectionList.Count > 0)
                 {
                     foreach (SwissTransport.Connection connection in connections.ConnectionList)
@@ -48,21 +49,21 @@ namespace TransportAppGUI
             return new ListViewItem(connections);
         }
 
-        private void cbStationEnd_TextUpdate(object sender, EventArgs e)
+        private void CbStationEnd_TextUpdate(object sender, EventArgs e)
         {
             cbStationEnd.BackColor = SystemColors.Window;
             cbStationEnd.ClearStationNames();
             cbStationEnd.AddStationToCombobox(transport);
         }
 
-        private void cbStationFrom_TextUpdate(object sender, EventArgs e)
+        private void CbStationFrom_TextUpdate(object sender, EventArgs e)
         {
             cbStationFrom.BackColor = SystemColors.Window;
             cbStationFrom.ClearStationNames();
             cbStationFrom.AddStationToCombobox(transport);
         }
 
-        private void btnSendMail_Click(object sender, EventArgs e)
+        private void BtnSendMail_Click(object sender, EventArgs e)
         {
             SendMail sendMail = new SendMail();
             sendMail.Subject = "Fahrplan";
@@ -75,10 +76,10 @@ namespace TransportAppGUI
                 }
             }
 
-            sendMail.sendMail();
+            sendMail.MailSender();
         }
 
-        private void btnSwitchStation_Click(object sender, EventArgs e)
+        private void BtnSwitchStation_Click(object sender, EventArgs e)
         {
             string fromStation = cbStationFrom.Text;
             cbStationFrom.Text = cbStationEnd.Text;
@@ -86,7 +87,7 @@ namespace TransportAppGUI
            
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }

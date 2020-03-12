@@ -24,7 +24,7 @@ namespace TransportAppGUI
             set { _body = value; }
         }
 
-        public void sendMail()
+        public void MailSender()
         {
             System.Diagnostics.Process.Start(string.Format(@"mailto:?subjects" + Subject + "&body=" + Body));
         }

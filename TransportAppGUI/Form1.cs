@@ -22,13 +22,13 @@ namespace TransportAppGUI
 
         private void btnSearchConnection_Click(object sender, EventArgs e)
         {
-            fSearchConnection connections = new fSearchConnection();
+            FSearchConnection connections = new FSearchConnection();
             connections.ShowDialog();
         }
 
         private void btnSearchStation_Click(object sender, EventArgs e)
         {
-            fStationBoard station = new fStationBoard();
+            FStationBoard station = new FStationBoard();
             station.ShowDialog();
         }
     }

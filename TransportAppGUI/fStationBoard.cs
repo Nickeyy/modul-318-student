@@ -12,21 +12,22 @@ using SwissTransport;
 
 namespace TransportAppGUI
 {
-    public partial class fStationBoard : Form
+    public partial class FStationBoard : Form
     {
         readonly Transport transport = new Transport();
-        public fStationBoard()
+        public FStationBoard()
         {
             InitializeComponent();
         }
 
-        private void btnSearchStation_Click(object sender, EventArgs e)
+        private void BtnSearchStation_Click(object sender, EventArgs e)
         {
+            StationBoardRoot stationBoardRoot;
             Cursor.Current = Cursors.WaitCursor;
             lvStationBoard.Items.Clear();
             if (cbStation.AreStationFilled())
             {
-                StationBoardRoot stationBoardRoot = transport.GetStationBoard(cbStation.Text, "");
+                stationBoardRoot = transport.GetStationBoard(cbStation.Text, "");
                 if(stationBoardRoot.Entries.Count > 0)
                 {
                     foreach (SwissTransport.StationBoard stationBoard in stationBoardRoot.Entries)
@@ -48,23 +49,24 @@ namespace TransportAppGUI
             return new ListViewItem(stationBoards);
         }
 
-        private void cbStation_TextUpdate(object sender, EventArgs e)
+        private void CbStation_TextUpdate(object sender, EventArgs e)
         {
             cbStation.BackColor = SystemColors.Window;
             cbStation.ClearStationNames();
             cbStation.AddStationToCombobox(transport);
         }
 
-        private void btnShowMap_Click(object sender, EventArgs e)
+        private void BtnShowMap_Click(object sender, EventArgs e)
         {
+            Station station;
             if (cbStation.AreStationFilled())
             {
-                Station station = transport.GetStations(cbStation.Text).StationList.First();
+                station = transport.GetStations(cbStation.Text).StationList.First();
                 Process.Start("https://www.google.com/maps/search/?api=1&query=" + station.Coordinate.XCoordinate + "," + station.Coordinate.YCoordinate);
             }
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }

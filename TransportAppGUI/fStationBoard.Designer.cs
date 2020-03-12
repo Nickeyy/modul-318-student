@@ -1,6 +1,6 @@
 ﻿namespace TransportAppGUI
 {
-    partial class fStationBoard
+    partial class FStationBoard
     {
         /// <summary>
         /// Required designer variable.
@@ -58,7 +58,7 @@
             this.btnSearchStation.TabIndex = 3;
             this.btnSearchStation.Text = "Suchen";
             this.btnSearchStation.UseVisualStyleBackColor = true;
-            this.btnSearchStation.Click += new System.EventHandler(this.btnSearchStation_Click);
+            this.btnSearchStation.Click += new System.EventHandler(this.BtnSearchStation_Click);
             // 
             // lvStationBoard
             // 
@@ -99,7 +99,7 @@
             this.cbStation.Name = "cbStation";
             this.cbStation.Size = new System.Drawing.Size(320, 21);
             this.cbStation.TabIndex = 1;
-            this.cbStation.TextUpdate += new System.EventHandler(this.cbStation_TextUpdate);
+            this.cbStation.TextUpdate += new System.EventHandler(this.CbStation_TextUpdate);
             // 
             // lblStation
             // 
@@ -119,7 +119,7 @@
             this.btnShowMap.TabIndex = 2;
             this.btnShowMap.Text = "Auf Karte zeigen";
             this.btnShowMap.UseVisualStyleBackColor = true;
-            this.btnShowMap.Click += new System.EventHandler(this.btnShowMap_Click);
+            this.btnShowMap.Click += new System.EventHandler(this.BtnShowMap_Click);
             // 
             // btnBack
             // 
@@ -129,7 +129,7 @@
             this.btnBack.TabIndex = 5;
             this.btnBack.Text = "abbrechen";
             this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // fStationBoard
             // 
