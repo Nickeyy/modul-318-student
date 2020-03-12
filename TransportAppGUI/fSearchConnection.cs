@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace TransportAppGUI
 {
-    public partial class FSearchConnection : Form
+    public partial class fSearchConnection : Form
     {
         readonly Transport transport = new Transport();
-        public FSearchConnection()
+        public fSearchConnection()
         {
             InitializeComponent();
         }

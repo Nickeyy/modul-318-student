@@ -1,6 +1,6 @@
 ﻿namespace TransportAppGUI
 {
-    partial class FSearchConnection
+    partial class fSearchConnection
     {
         /// <summary>
         /// Required designer variable.

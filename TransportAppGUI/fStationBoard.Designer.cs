@@ -1,6 +1,6 @@
 ﻿namespace TransportAppGUI
 {
-    partial class FStationBoard
+    partial class fStationBoard
     {
         /// <summary>
         /// Required designer variable.

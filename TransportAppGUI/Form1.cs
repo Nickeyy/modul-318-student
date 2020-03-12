@@ -16,19 +16,17 @@ namespace TransportAppGUI
         public FStartGui()
         {
             InitializeComponent();
-
-            
         }
 
         private void btnSearchConnection_Click(object sender, EventArgs e)
         {
-            FSearchConnection connections = new FSearchConnection();
+            fSearchConnection connections = new fSearchConnection();
             connections.ShowDialog();
         }
 
         private void btnSearchStation_Click(object sender, EventArgs e)
         {
-            FStationBoard station = new FStationBoard();
+            fStationBoard station = new fStationBoard();
             station.ShowDialog();
         }
     }

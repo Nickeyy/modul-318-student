@@ -12,10 +12,10 @@ using SwissTransport;
 
 namespace TransportAppGUI
 {
-    public partial class FStationBoard : Form
+    public partial class fStationBoard : Form
     {
         readonly Transport transport = new Transport();
-        public FStationBoard()
+        public fStationBoard()
         {
             InitializeComponent();
         }
