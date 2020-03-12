@@ -49,35 +49,35 @@
     <Compile Include="DropDownComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="fSearchConnection.cs">
+    <Compile Include="SearchConnection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fSearchConnection.Designer.cs">
-      <DependentUpon>fSearchConnection.cs</DependentUpon>
+    <Compile Include="SearchConnection.Designer.cs">
+      <DependentUpon>SearchConnection.cs</DependentUpon>
     </Compile>
-    <Compile Include="fStationBoard.cs">
+    <Compile Include="StationBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fStationBoard.Designer.cs">
-      <DependentUpon>fStationBoard.cs</DependentUpon>
+    <Compile Include="StationBoard.Designer.cs">
+      <DependentUpon>StationBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SendMail.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fSearchConnection.resx">
-      <DependentUpon>fSearchConnection.cs</DependentUpon>
+    <EmbeddedResource Include="SearchConnection.resx">
+      <DependentUpon>SearchConnection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fStationBoard.resx">
-      <DependentUpon>fStationBoard.cs</DependentUpon>
+    <EmbeddedResource Include="StationBoard.resx">
+      <DependentUpon>StationBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

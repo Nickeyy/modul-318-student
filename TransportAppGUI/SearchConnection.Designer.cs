@@ -1,6 +1,6 @@
 ﻿namespace TransportAppGUI
 {
-    partial class fSearchConnection
+    partial class SearchConnection
     {
         /// <summary>
         /// Required designer variable.
@@ -107,7 +107,7 @@
             // 
             // cTo
             // 
-            this.cTo.Text = "To";
+            this.cTo.Text = "Nach";
             this.cTo.Width = 80;
             // 
             // cArriveTime
@@ -210,7 +210,7 @@
             this.cbStationFrom.TabIndex = 1;
             this.cbStationFrom.TextUpdate += new System.EventHandler(this.CbStationFrom_TextUpdate);
             // 
-            // fSearchConnection
+            // SearchConnection
             // 
             this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,7 +229,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(800, 600);
-            this.Name = "fSearchConnection";
+            this.Name = "SearchConnection";
             this.Text = "SearchConnection";
             this.ResumeLayout(false);
             this.PerformLayout();

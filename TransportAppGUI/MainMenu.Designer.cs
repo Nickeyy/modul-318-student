@@ -62,11 +62,11 @@
             this.btnSearchStation.Name = "btnSearchStation";
             this.btnSearchStation.Size = new System.Drawing.Size(175, 72);
             this.btnSearchStation.TabIndex = 2;
-            this.btnSearchStation.Text = "Ab einer Station suchen";
+            this.btnSearchStation.Text = "Stationstaffel";
             this.btnSearchStation.UseVisualStyleBackColor = true;
             this.btnSearchStation.Click += new System.EventHandler(this.BtnSearchStation_Click);
             // 
-            // FStartGui
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -75,7 +75,7 @@
             this.Controls.Add(this.btnSearchConnection);
             this.Controls.Add(this.lblOption);
             this.MinimumSize = new System.Drawing.Size(600, 400);
-            this.Name = "FStartGui";
+            this.Name = "MainMenu";
             this.Text = "TransportApp";
             this.ResumeLayout(false);
             this.PerformLayout();
