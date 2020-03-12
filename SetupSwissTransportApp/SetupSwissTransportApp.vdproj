@@ -28,12 +28,12 @@
         "Entry"
         {
         "MsmKey" = "8:_3BBCAF4CBCF286B77D10FE6A9C7EAEDC"
-        "OwnerKey" = "8:_40A55C65AC6D3501C3B4933E8E232839"
+        "OwnerKey" = "8:_8196D5BC20A59FA912D78273F5C19F3D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_40A55C65AC6D3501C3B4933E8E232839"
+        "MsmKey" = "8:_8196D5BC20A59FA912D78273F5C19F3D"
         "OwnerKey" = "8:_3117401B32814AD6BA467CFD2E4DCF42"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -52,6 +52,12 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8196D5BC20A59FA912D78273F5C19F3D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_3117401B32814AD6BA467CFD2E4DCF42"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -59,12 +65,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_927E95CF572C0527A20F6B96CBA31FA4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_40A55C65AC6D3501C3B4933E8E232839"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -161,14 +161,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_40A55C65AC6D3501C3B4933E8E232839"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8196D5BC20A59FA912D78273F5C19F3D"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:SwissTransport, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_40A55C65AC6D3501C3B4933E8E232839"
+                    "_8196D5BC20A59FA912D78273F5C19F3D"
                     {
                     "Name" = "8:SwissTransport.dll"
                     "Attributes" = "3:512"
@@ -280,7 +280,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SetupSwissTransportApp"
         "ProductCode" = "8:{DE9934E6-45D5-4F29-9A00-24F369F5DFD0}"
-        "PackageCode" = "8:{6FE346C9-40F5-4725-BD32-A6BEB5251955}"
+        "PackageCode" = "8:{6DDA3FDA-C92D-4A48-A3C5-A0A75F480FCA}"
         "UpgradeCode" = "8:{B651551E-A4FA-4988-945A-DA29D5A49C00}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
@@ -288,7 +288,7 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Luzerner Kantonalbank"
+        "Manufacturer" = "8:LuzernerKantonalbank"
         "ARPHELPTELEPHONE" = "8:079 926 88 82"
         "ARPHELPLINK" = "8:https://github.com/Nickeyy/modul-318-student"
         "Title" = "8:SetupSwissTransportApp"
@@ -829,7 +829,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3117401B32814AD6BA467CFD2E4DCF42"
             {
-            "SourcePath" = "8:..\\TransportAppGUI\\obj\\Debug\\TransportAppGUI.exe"
+            "SourcePath" = "8:..\\TransportAppGUI\\obj\\Release\\TransportAppGUI.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_669330807A0E4D29A34D62E4530D6112"
