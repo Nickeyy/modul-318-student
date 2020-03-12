@@ -22,14 +22,21 @@ namespace TransportAppGUI
 
         public void AddStationToCombobox(Transport transport)
         {
-            DroppedDown = true;
-            Cursor.Current = Cursors.Default;
-            foreach (Station station in transport.GetStations(Text).StationList)
+            try
             {
-                if (station.Name != null && station.Id != null)
+                DroppedDown = true;
+                Cursor.Current = Cursors.Default;
+                foreach (Station station in transport.GetStations(Text).StationList)
                 {
-                    Items.Add(station.Name);
+                    if (station.Name != null && station.Id != null)
+                    {
+                        Items.Add(station.Name);
+                    }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("Es konnte keine Verbindung zum Internet hergestellt werden", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public bool AreStationFilled()
